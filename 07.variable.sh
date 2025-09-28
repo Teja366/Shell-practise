@@ -4,7 +4,7 @@
 
 Start_time=$(date +%s)
 
-sleep 20
+sleep 20 &
 
 end_time=$(date +%s)
 
