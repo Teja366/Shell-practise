@@ -7,7 +7,7 @@ if [ $USERID -ne 0 ]; then
     exit 1 # failure is other than 0
 fi
 
-sudo dnf install mysqql -y
+sudo dnf install mysql -y
 
 if [ $? -ne 0 ]; then
     echo "Error : Installing My SQL failed"
