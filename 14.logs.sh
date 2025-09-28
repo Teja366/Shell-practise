@@ -6,12 +6,12 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-mkdir -p $LOG_PATH
 
 LOG_PATH="var/log/shell-script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOG_PATH/$SCRIPT_NAME.logs"
 
+mkdir -p $LOG_PATH
 echo "Script started Executing at $data"
 if [ $USERID -ne 0 ]; then 
     echo "Please run this script"
