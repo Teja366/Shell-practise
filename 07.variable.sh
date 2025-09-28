@@ -2,12 +2,12 @@
 
 #DATE=$(date)
 
-Start_time=$(date +%s)
+START_TIME=$(date +%s)
 
-sleep 20 &
+sleep 20 
 
-END=$(date +%s)
+END_TIME=$(date +%s)
 
-Total_time= $(( $END - $Start_time ))
+Total_time=$ (( $END_TIME-$START_TIME))
 
 echo "(Timestamp executed : $Total_time)"
