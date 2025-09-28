@@ -27,28 +27,28 @@ VALIDATE(){
 	fi
 }
 
-dnf list installed mysql &??$LOG_FILE
+dnf list installed mysql &>>$LOG_FILE
 
 if [ $? -ne 0 ]; then 
-    dnf install mysql -y &??$LOG_FILE
+    dnf install mysql -y &>>$LOG_FILE
 	VALIDATE $? "MySQL"
 else
 	echo -e "Already MySQL is installed .. $Y Skipping $N "
 fi
 
-dnf list installed nginx &??$LOG_FILE
+dnf list installed nginx &>>$LOG_FILE
 
 if [ $? -ne 0 ]; then 
-    dnf install nginx -y &??$LOG_FILE
+    dnf install nginx -y &>>$LOG_FILE
 	VALIDATE $? "NGINX"
 else
 	echo -e "Already NGINX is installed .. $Y Skipping $N "
 fi
 
-dnf list installed python3 &??$LOG_FILE
+dnf list installed python3 &>>$LOG_FILE
 
 if [ $? -ne 0 ]; then 
-    dnf install python3 -y &??$LOG_FILE
+    dnf install python3 -y &>>$LOG_FILEE
 	VALIDATE $? "python3"
 else
 	echo -e "Already python3 is installed .. $Y Skipping $N "
