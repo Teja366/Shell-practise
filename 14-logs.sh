@@ -7,11 +7,11 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-LOG_PATH="var/log/shell-script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-LOG_FILE="$LOG_PATH/$SCRIPT_NAME.logs"
+#LOG_PATH="/tmp/$SCRIPT_NAME"
+LOG_FILE="/tmp/$SCRIPT_NAME.logs"
 
-mkdir -p $LOG_PATH
+#mkdir -p $LOG_PATH
 echo "Script started Executing at $data"
 if [ $USERID -ne 0 ]; then 
     echo "Please run this script"
