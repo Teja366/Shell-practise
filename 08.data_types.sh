@@ -10,4 +10,4 @@ echo "Sum is $Sum + $Name"
 
 FRIENDS=("Sravani" "Bhargavi" "Anila" "Aishu")
 
-echo "My friends are ${FRIENDS}{@}"
+echo "My friends are ${FRIENDS[@]}"
