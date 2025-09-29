@@ -12,7 +12,7 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="/tmp/$SCRIPT_NAME.logs"
 
 #mkdir -p $LOG_PATH
-echo "Script started Executing at $data"
+echo "Script started Executing at $date"
 if [ $USERID -ne 0 ]; then 
     echo "Please run this script"
     exit 1 # failure is other than 0
@@ -48,7 +48,7 @@ fi
 dnf list installed python3 &>>$LOG_FILE
 
 if [ $? -ne 0 ]; then 
-    dnf install python3 -y &>>$LOG_FILEE
+    dnf install python3 -y &>>$LOG_FILE
 	VALIDATE $? "python3"
 else
 	echo -e "Already python3 is installed .. $Y Skipping $N "
