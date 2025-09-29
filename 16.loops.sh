@@ -12,7 +12,7 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="/tmp/$SCRIPT_NAME.logs"
 
 #mkdir -p $LOG_PATH
-echo "Script started Executing at $date"
+echo "Script started Executing at $(date)"
 if [ $USERID -ne 0 ]; then 
     echo "Please run this script"
     exit 1 # failure is other than 0
